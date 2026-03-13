@@ -1,0 +1,86 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Witsawa &mdash; AI Technology Consulting</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <slot name="head" />
+    </head>
+    <body>
+        <slot />
+
+        <!-- Script functionality -->
+        <script is:inline>
+
+            // Navbar Scroll Effect
+            const navbar = document.getElementById("navbar");
+            if (navbar) {
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 50) {
+                        navbar.style.background = "rgba(13,7,24,0.95)";
+                        navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.5)";
+                        navbar.style.borderBottom =
+                            "1px solid rgba(168,85,247,0.2)";
+                    } else {
+                        navbar.style.background = "rgba(13,7,24,0.7)";
+                        navbar.style.boxShadow = "none";
+                        navbar.style.borderBottom =
+                            "1px solid rgba(255,255,255,0.08)";
+                    }
+                });
+            }
+
+            // Reveal on Scroll
+            const observeReveal = () => {
+                const reveals = document.querySelectorAll(".reveal");
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("active");
+                            }
+                        });
+                    },
+                    { threshold: 0.1 },
+                );
+                reveals.forEach((r) => observer.observe(r));
+            };
+            document.addEventListener("DOMContentLoaded", observeReveal);
+
+            // Smooth Scroll function
+            window.scrollToId = function (id) {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                    // close menu on mobile
+                    const navLinks = document.getElementById("nav-links");
+                    const hamburger = document.getElementById("hamburger");
+                    if (navLinks && navLinks.classList.contains("active")) {
+                        navLinks.classList.remove("active");
+                        if (hamburger) hamburger.classList.remove("active");
+                    }
+                }
+            };
+
+            // Toggle Menu
+            window.toggleMenu = function () {
+                const navLinks = document.getElementById("nav-links");
+                const hamburger = document.getElementById("hamburger");
+                if (navLinks) navLinks.classList.toggle("active");
+                if (hamburger) hamburger.classList.toggle("active");
+            };
+
+            // Custom cursor (optional, if we want to add later)
+        </script>
+    </body>
+</html>

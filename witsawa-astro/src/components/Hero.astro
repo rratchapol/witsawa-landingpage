@@ -1,0 +1,505 @@
+---
+
+---
+
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-glow-orb"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">AI Technology Partner</div>
+    <h1 class="hero-h1">
+      Build Scalable Software.<br />
+      <span class="grad">Unlock AI Productivity.</span>
+    </h1>
+    <p class="hero-desc">
+      Witsawa is a technology partner that designs and develops custom web
+      applications, mobile platforms, and AI-powered systems to help
+      organizations streamline operations, improve productivity, and accelerate
+      digital transformation.
+    </p>
+    <div class="hero-buttons">
+      <a href="start-project.html" class="btn-primary">
+        Start a Project
+        <svg
+          width="16"
+          height="16"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg
+        >
+      </a>
+      <a
+        href="#solutions"
+        class="btn-secondary"
+        onclick="document.getElementById('solutions').scrollIntoView({behavior:'smooth'});return false;"
+      >
+        View Our Solutions
+        <svg
+          width="16"
+          height="16"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          ><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"
+          ></path></svg
+        >
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <span style="color:#a855f7;">&#10022;</span>&nbsp;150+ Projects
+        Delivered
+      </div>
+      <div class="hero-trust-divider"></div>
+      <div class="hero-trust-item">
+        <span style="color:#38bdf8;">&#10022;</span>&nbsp;Enterprise-Grade
+        Security
+      </div>
+      <div class="hero-trust-divider"></div>
+      <div class="hero-trust-item">
+        <span style="color:#a855f7;">&#10022;</span>&nbsp;98% Client Retention
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  /* ── UPDATED HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 5vw 80px;
+    position: relative;
+    overflow: hidden;
+    background-image: url("/images/hero-bg.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(8, 4, 18, 0.8) 0%,
+      rgba(20, 7, 48, 0.65) 40%,
+      rgba(8, 4, 18, 0.85) 100%
+    );
+    z-index: 0;
+  }
+  #hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-particles {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .hero-glow-orb {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 700px;
+    background: radial-gradient(
+      ellipse,
+      rgba(124, 58, 237, 0.18) 0%,
+      rgba(37, 99, 235, 0.07) 45%,
+      transparent 70%
+    );
+    filter: blur(100px);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 0;
+    animation: heroGlowAnim 7s ease-in-out infinite;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1.1rem;
+    background: rgba(124, 58, 237, 0.14);
+    border: 1px solid rgba(124, 58, 237, 0.38);
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #a855f7;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: fadeSlideUp 0.75s ease both;
+  }
+  .hero-badge-icon {
+    color: #a855f7;
+    animation: spinGlow 3s linear infinite;
+    filter: drop-shadow(0 0 5px #a855f7);
+    flex-shrink: 0;
+  }
+  @keyframes spinGlow {
+    0% {
+      transform: rotate(0deg);
+      filter: drop-shadow(0 0 4px #a855f7);
+    }
+    50% {
+      transform: rotate(180deg);
+      filter: drop-shadow(0 0 9px #c084fc);
+    }
+    100% {
+      transform: rotate(360deg);
+      filter: drop-shadow(0 0 4px #a855f7);
+    }
+  }
+  .hero-h1 {
+    font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    font-weight: 600 !important;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    animation: fadeSlideUp 0.75s 0.12s ease both;
+  }
+  .hero-h1 .grad {
+    background: linear-gradient(135deg, #c084fc 0%, #818cf8 42%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-desc {
+    font-size: clamp(1rem, 1.4vw, 1.13rem);
+    color: rgba(200, 185, 240, 0.8);
+    max-width: 720px;
+    line-height: 1.78;
+    margin: 0 auto 2.6rem;
+    animation: fadeSlideUp 0.75s 0.24s ease both;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+    animation: fadeSlideUp 0.75s 0.36s ease both;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.88rem 2.1rem;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      transform 0.22s,
+      box-shadow 0.22s;
+    box-shadow:
+      0 0 30px rgba(124, 58, 237, 0.5),
+      0 4px 20px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 0 55px rgba(124, 58, 237, 0.75),
+      0 8px 30px rgba(0, 0, 0, 0.4);
+  }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.88rem 2.1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #f0eaff;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.22s;
+    backdrop-filter: blur(12px);
+    text-decoration: none;
+  }
+  .btn-secondary:hover {
+    border-color: rgba(168, 85, 247, 0.55);
+    background: rgba(168, 85, 247, 0.1);
+    transform: translateY(-2px);
+  }
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    animation: fadeSlideUp 0.75s 0.5s ease both;
+  }
+  .hero-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(200, 185, 240, 0.5);
+    font-weight: 500;
+  }
+  .hero-trust-divider {
+    width: 1px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* scroll-in particles */
+  .hero-particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    animation: floatParticle var(--dur) var(--delay) ease-in-out infinite;
+  }
+  @keyframes floatParticle {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+    }
+    20% {
+      opacity: var(--op);
+    }
+    80% {
+      opacity: var(--op);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(calc(var(--rise) * -1)) scale(1);
+    }
+  }
+
+  /* keyframes */
+  @keyframes pulseDot {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.35;
+    }
+  }
+  @keyframes heroGlowAnim {
+    0%,
+    100% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -53%) scale(1.06);
+    }
+  }
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes glowPulse {
+    0%,
+    100% {
+      box-shadow:
+        0 0 40px rgba(124, 58, 237, 0.6),
+        0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+      box-shadow:
+        0 0 60px rgba(124, 58, 237, 0.8),
+        0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  /* scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(38px);
+    transition:
+      opacity 0.72s ease,
+      transform 0.72s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 {
+    transition-delay: 0.1s;
+  }
+  .reveal-delay-2 {
+    transition-delay: 0.2s;
+  }
+  .reveal-delay-3 {
+    transition-delay: 0.3s;
+  }
+  .reveal-delay-4 {
+    transition-delay: 0.4s;
+  }
+
+  /* responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: rgba(10, 5, 20, 0.97);
+      padding: 2rem;
+      gap: 1.5rem;
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+    }
+    .hero-buttons {
+      flex-direction: column;
+    }
+    .btn-primary,
+    .btn-secondary {
+      justify-content: center;
+    }
+    .hero-trust {
+      gap: 1rem;
+    }
+    .hero-trust-divider {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-buttons {
+      flex-direction: column;
+    }
+    .btn-primary,
+    .btn-secondary {
+      justify-content: center;
+    }
+    .hero-trust {
+      gap: 1rem;
+    }
+    .hero-trust-divider {
+      display: none;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById("hero-canvas");
+    const heroSection = document.getElementById("hero");
+    if (canvas && heroSection) {
+      const ctx = canvas.getContext("2d");
+      let width, height;
+      let particles = [];
+
+      function resize() {
+        width = canvas.width = heroSection.offsetWidth;
+        height = canvas.height = heroSection.offsetHeight;
+      }
+      window.addEventListener("resize", resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 0.5;
+          this.vy = (Math.random() - 0.5) * 0.5;
+          this.radius = Math.random() * 1.5 + 0.5;
+          this.alpha = Math.random() * 0.5 + 0.1;
+        }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          if (this.x < 0 || this.x > width) this.vx *= -1;
+          if (this.y < 0 || this.y > height) this.vy *= -1;
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(168, 85, 247, ${this.alpha})`;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < 50; i++) particles.push(new Particle());
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach((p) => {
+          p.update();
+          p.draw();
+        });
+
+        particles.forEach((p1, i) => {
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dx = p1.x - p2.x;
+            const dy = p1.y - p2.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 150) {
+              ctx.beginPath();
+              ctx.moveTo(p1.x, p1.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(168, 85, 247, ${((150 - dist) / 150) * 0.15})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        });
+
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+  });
+</script>

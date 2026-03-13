@@ -1,0 +1,703 @@
+---
+
+---
+
+<section id="what-we-do">
+  <div class="wwd-header reveal">
+    <span class="section-tag">What We Do</span>
+    <h2 class="wwd-title">Technology <span class="grad">Solutions</span></h2>
+    <p class="wwd-sub">
+      We help organizations build powerful digital systems tailored to their
+      unique business needs.
+    </p>
+  </div>
+
+  <div class="wwd-grid">
+    <!-- ── CARD 1: Web Applications ── -->
+    <div class="wwd-card-outer reveal">
+      <div class="wwd-card">
+        <div class="wwd-vis">
+          <div class="wwd-vis-grad"></div>
+          <div class="wwd-vis-floor"></div>
+          <svg
+            viewBox="0 0 380 220"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <image
+              href="/images/CustomWebApplications.png"
+              x="0"
+              y="0"
+              width="380"
+              height="240"
+              preserveAspectRatio="xMidYMid meet"
+            />
+          </svg>
+        </div>
+        <div class="wwd-body">
+          <div class="wwd-num">01 &mdash; Web Applications</div>
+          <h3>Custom Web Applications</h3>
+          <p class="wwd-desc">
+            We design and develop scalable, enterprise-grade web applications
+            built to support complex business processes and grow with your
+            organization.
+          </p>
+          <div class="wwd-pills">
+            <span class="wwd-pill">ERP Systems</span>
+            <span class="wwd-pill">CRM Platforms</span>
+            <span class="wwd-pill">Marketplaces</span>
+            <span class="wwd-pill">Data Platforms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CARD 2: Mobile Applications ── -->
+    <div class="wwd-card-outer reveal reveal-delay-1">
+      <div class="wwd-card">
+        <div class="wwd-vis">
+          <div class="wwd-vis-grad"></div>
+          <div class="wwd-vis-floor"></div>
+          <svg
+            viewBox="0 0 380 220"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <image
+              href="/images/CrossPlatformMobileApplications.png"
+              x="0"
+              y="0"
+              width="380"
+              height="240"
+              preserveAspectRatio="xMidYMid meet"
+            />
+          </svg>
+        </div>
+        <div class="wwd-body">
+          <div class="wwd-num">02 &mdash; Mobile Applications</div>
+          <h3>Cross-Platform Mobile Applications</h3>
+          <p class="wwd-desc">
+            We build high-performance mobile apps for both iOS and Android from
+            a single codebase — reducing cost, speeding up delivery, and
+            ensuring a consistent user experience.
+          </p>
+          <div class="wwd-pills">
+            <span class="wwd-pill">React Native</span>
+            <span class="wwd-pill">Flutter</span>
+            <span class="wwd-pill">iOS &amp; Android</span>
+            <span class="wwd-pill">Single Codebase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CARD 3: AI Applications ── -->
+    <div class="wwd-card-outer reveal reveal-delay-2">
+      <div class="wwd-card">
+        <div class="wwd-vis">
+          <div class="wwd-vis-grad"></div>
+          <div class="wwd-vis-floor"></div>
+          <svg
+            viewBox="0 0 380 220"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <image
+              href="/images/AIPoweredApplications.png"
+              x="0"
+              y="0"
+              width="380"
+              height="240"
+              preserveAspectRatio="xMidYMid meet"
+            />
+          </svg>
+        </div>
+        <div class="wwd-body">
+          <div class="wwd-num">03 &mdash; AI Applications</div>
+          <h3>AI-Powered Applications</h3>
+          <p class="wwd-desc">
+            We build AI-powered systems that automate workflows, analyze data,
+            and help organizations make faster, smarter decisions.
+          </p>
+          <div class="wwd-pills">
+            <span class="wwd-pill">AI Assistants</span>
+            <span class="wwd-pill">AI Chatbots</span>
+            <span class="wwd-pill">Doc Processing</span>
+            <span class="wwd-pill">AI Agents</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  /* ═══════════════════════════════
+     WHAT WE DO — Purple Glassmorphism
+  ═══════════════════════════════ */
+  #what-we-do {
+    padding: 110px 5vw;
+    position: relative;
+    overflow: hidden;
+    /* Large centered radial halo — the main background glow */
+    background:
+      radial-gradient(
+        ellipse 90% 60% at 50% 72%,
+        rgba(88, 20, 180, 0.28) 0%,
+        rgba(72, 14, 148, 0.18) 28%,
+        rgba(50, 8, 110, 0.1) 52%,
+        transparent 72%
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 50% 80%,
+        rgba(120, 40, 210, 0.18) 0%,
+        transparent 60%
+      );
+  }
+
+  /* Soft top-center accent — reinforces the upward bloom */
+  #what-we-do::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 480px;
+    border-radius: 0 0 50% 50%;
+    background: radial-gradient(
+      ellipse 80% 100% at 50% -10%,
+      rgba(109, 28, 217, 0.22) 0%,
+      rgba(80, 16, 170, 0.1) 45%,
+      transparent 70%
+    );
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Bottom-center deep bloom — anchors the cards above a glowing base */
+  #what-we-do::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 400px;
+    background: radial-gradient(
+      ellipse 100% 80% at 50% 100%,
+      rgba(109, 28, 217, 0.3) 0%,
+      rgba(76, 14, 160, 0.16) 38%,
+      transparent 68%
+    );
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── WHAT WE DO: Header — LEFT aligned ── */
+  .wwd-header {
+    text-align: left;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .wwd-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #b47aff;
+    margin-bottom: 1.1rem;
+  }
+  .wwd-tag::before,
+  .wwd-tag::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 28px;
+    background: linear-gradient(90deg, transparent, #9333ea);
+  }
+  .wwd-tag::after {
+    background: linear-gradient(90deg, #9333ea, transparent);
+  }
+  @media (max-width: 1024px) {
+    .wwd-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+    }
+  }
+  @media (max-width: 768px) {
+    .wwd-header {
+      margin-bottom: 2.5rem;
+    }
+    .wwd-tag {
+      font-size: 0.64rem;
+      letter-spacing: 0.1em;
+      gap: 0.45rem;
+    }
+    .wwd-tag::before,
+    .wwd-tag::after {
+      width: 20px;
+    }
+  }
+  .wwd-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  .wwd-title .grad {
+    background: linear-gradient(135deg, #c084fc 0%, #818cf8 40%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .wwd-sub {
+    font-size: 1.05rem;
+    color: rgba(210, 185, 255, 0.65);
+    max-width: 560px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ── Grid ── */
+  .wwd-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 1.75rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Neon border stroke animation (hover only) ── */
+
+  /* ── Card Outer Wrapper — lift + rotating neon border ── */
+  .wwd-card-outer {
+    position: relative;
+    border-radius: 23px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .wwd-card-outer:hover {
+    transform: translateY(-11px);
+  }
+
+  /* Animated neon border — light travels ALONG the border path, hover only */
+  @property --wwd-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+  @keyframes wwd-border-travel {
+    to {
+      --wwd-angle: 360deg;
+    }
+  }
+
+  .wwd-card-outer::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 24px;
+    padding: 1px;
+    /* The bright spot is at var(--wwd-angle); animating the property moves it around */
+    background: conic-gradient(
+      from var(--wwd-angle),
+      transparent 0%,
+      transparent 78%,
+      rgba(109, 28, 217, 0.1) 83%,
+      rgba(155, 80, 255, 0.55) 88%,
+      rgba(200, 140, 255, 0.9) 92%,
+      rgba(240, 180, 255, 1) 94%,
+      rgba(200, 140, 255, 0.9) 96%,
+      rgba(155, 80, 255, 0.5) 99%,
+      transparent 100%
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 5;
+  }
+  .wwd-card-outer:hover::after {
+    opacity: 1;
+    animation: wwd-border-travel 4s linear infinite;
+  }
+
+  /* ── Card — premium floating glass panel ── */
+  .wwd-card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* dark glass base — smooth multi-stop purple gradient */
+    background: linear-gradient(
+      180deg,
+      rgba(72, 18, 140, 0.28) 0%,
+      rgba(52, 10, 108, 0.24) 12%,
+      rgba(32, 6, 80, 0.42) 28%,
+      rgba(18, 4, 52, 0.58) 48%,
+      rgba(10, 2, 32, 0.72) 66%,
+      rgba(6, 1, 20, 0.84) 82%,
+      rgba(4, 1, 14, 0.92) 100%
+    );
+    border: 1px solid rgba(155, 80, 255, 0.28);
+    backdrop-filter: blur(36px) saturate(1.4) brightness(1.04);
+    -webkit-backdrop-filter: blur(36px) saturate(1.4) brightness(1.04);
+    box-shadow:
+      /* top inner rim highlight */
+      0 1px 0 0 rgba(190, 120, 255, 0.22) inset,
+      /* very faint inner glow */ 0 0 24px rgba(109, 28, 217, 0.1) inset,
+      /* outer depth shadow */ 0 24px 64px rgba(0, 0, 0, 0.6),
+      /* faint purple halo */ 0 0 40px rgba(109, 28, 217, 0.1);
+    transition:
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+    cursor: default;
+    isolation: isolate;
+  }
+
+  /* ── Inner light sweep — very subtle top accent only ── */
+  .wwd-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      /* soft radial centre glow */
+      radial-gradient(
+        ellipse 80% 55% at 50% 30%,
+        rgba(130, 50, 210, 0.1) 0%,
+        rgba(90, 20, 180, 0.05) 40%,
+        transparent 70%
+      ),
+      /* corner lighting sweep */
+      linear-gradient(
+          135deg,
+          rgba(155, 70, 235, 0.12) 0%,
+          rgba(110, 30, 200, 0.06) 20%,
+          transparent 50%,
+          rgba(8, 1, 24, 0.08) 100%
+        );
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+  }
+
+  /* ── Top glass reflection bar + bottom depth line ── */
+  .wwd-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 3%,
+      rgba(180, 120, 255, 0.45) 20%,
+      rgba(220, 160, 255, 0.95) 45%,
+      rgba(210, 140, 255, 0.95) 55%,
+      rgba(168, 85, 247, 0.5) 80%,
+      transparent 97%
+    );
+    opacity: 0.75;
+    transition: opacity 0.35s ease;
+    border-radius: 22px 22px 0 0;
+    z-index: 3;
+  }
+
+  /* ── Hover: stroke animation only — nothing else changes ── */
+  .wwd-card:hover {
+    /* lift handled by .wwd-card-outer */
+  }
+  .wwd-card:hover::after {
+    opacity: 1;
+  }
+  .wwd-card:hover::before {
+    opacity: 1;
+  }
+
+  /* ── Visual area ── */
+  .wwd-visual {
+    height: 210px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .wwd-visual-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      /* top edge fade — no circular halo */ linear-gradient(
+      180deg,
+      rgba(60, 12, 120, 0.22) 0%,
+      rgba(30, 6, 70, 0.14) 40%,
+      rgba(8, 1, 20, 0.8) 100%
+    );
+  }
+  .wwd-visual svg {
+    position: relative;
+    z-index: 1;
+  }
+  .wwd-visual-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    background: linear-gradient(to bottom, transparent, rgba(14, 3, 35, 0.97));
+    z-index: 2;
+  }
+
+  /* ── Illustration container — fixed equal height, perfectly centred ── */
+  .wwd-vis {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 20px 20px 0 0;
+    /* flex centres the SVG; absolute overlays don't participate in flex flow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 18px;
+    box-sizing: border-box;
+  }
+  /* Background tint overlay */
+  .wwd-vis-grad {
+    position: absolute;
+    inset: 0;
+    background:
+      /* soft radial centre glow behind illustration */
+      radial-gradient(
+        ellipse 75% 60% at 50% 44%,
+        rgba(120, 40, 220, 0.18) 0%,
+        rgba(80, 16, 170, 0.1) 35%,
+        rgba(40, 6, 100, 0.05) 60%,
+        transparent 80%
+      ),
+      /* top-to-bottom tint — multi-stop for smooth blend */
+      linear-gradient(
+          180deg,
+          rgba(68, 14, 130, 0.26) 0%,
+          rgba(44, 8, 98, 0.18) 20%,
+          rgba(24, 4, 62, 0.12) 45%,
+          rgba(10, 2, 28, 0.6) 72%,
+          rgba(6, 1, 18, 0.84) 100%
+        );
+    pointer-events: none;
+  }
+  /* Bottom fade blends illustration into card body */
+  .wwd-vis-floor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: linear-gradient(to bottom, transparent, rgba(10, 2, 28, 0.98));
+    pointer-events: none;
+  }
+  /* SVG: flex item, scales proportionally, same size in every card */
+  .wwd-vis svg {
+    width: 100%;
+    height: auto;
+    max-width: 340px;
+    max-height: 192px;
+    display: block;
+    flex-shrink: 0;
+    /* sit above .wwd-vis-grad but below .wwd-vis-floor */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Card body ── */
+  .wwd-body {
+    padding: 1.6rem 1.8rem 1.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .wwd-num {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(168, 85, 247, 0.55);
+    margin-bottom: 0.55rem;
+  }
+  .wwd-card h3 {
+    font-size: 1.12rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+    margin-bottom: 0.9rem;
+    background: linear-gradient(135deg, #f0e4ff 0%, #d8b4fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .wwd-card p {
+    font-size: 0.855rem;
+    color: rgba(210, 185, 255, 0.65);
+    line-height: 1.72;
+    margin-bottom: 0.8rem;
+  }
+  .wwd-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(155, 80, 255, 0.1);
+  }
+  .wwd-pill {
+    font-size: 0.67rem;
+    font-weight: 600;
+    padding: 0.22rem 0.7rem;
+    background: rgba(109, 28, 217, 0.18);
+    border: 1px solid rgba(155, 80, 255, 0.28);
+    border-radius: 100px;
+    color: #c084fc;
+    letter-spacing: 0.02em;
+    transition:
+      background 0.25s,
+      border-color 0.25s;
+  }
+  .wwd-card:hover .wwd-pill {
+    background: rgba(109, 28, 217, 0.32);
+    border-color: rgba(168, 85, 247, 0.5);
+  }
+
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .wwd-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .wwd-grid .wwd-card-outer:last-child {
+      grid-column: 1 / -1;
+      max-width: 540px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    /* tablet: slightly shorter illustration zone */
+    .wwd-vis {
+      height: 200px;
+      padding: 12px 16px;
+    }
+    .wwd-vis svg {
+      max-height: 176px;
+      max-width: 300px;
+    }
+  }
+  @media (max-width: 640px) {
+    .wwd-grid {
+      grid-template-columns: 1fr;
+    }
+    .wwd-grid .wwd-card-outer:last-child {
+      grid-column: span 1;
+      max-width: 100%;
+    }
+    /* mobile: scale down but keep centred */
+    .wwd-vis {
+      height: 180px;
+      padding: 10px 14px;
+    }
+    .wwd-vis svg {
+      max-height: 160px;
+      max-width: 280px;
+    }
+  }
+
+  /* ── ILLUSTRATION VISUAL ENHANCEMENT — static only, no animation ───── */
+
+  /* ── Shared: faint dot-grid SVG pattern (data URI, no external file) ── */
+  .wwd-vis::before,
+  .sol-vis::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Layer 1 — central radial glow */
+    /* Layer 2 — faint tech dot grid */
+    background:
+      radial-gradient(
+        ellipse 72% 62% at 50% 44%,
+        rgba(148, 58, 242, 0.28) 0%,
+        rgba(108, 24, 200, 0.13) 42%,
+        transparent 68%
+      ),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Ccircle cx='14' cy='14' r='1.1' fill='rgba(168%2C85%2C247%2C0.18)'/%3E%3C/svg%3E");
+    background-size:
+      auto,
+      28px 28px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Shared: inset glow + outer frame glow on both containers ── */
+  .wwd-vis,
+  .sol-vis {
+    box-shadow:
+      /* inner ambient fill */
+      0 0 60px rgba(229, 229, 230, 0.2) inset,
+      0 0 120px rgba(88, 28, 135, 0.12) inset,
+      /* soft gradient frame — top edge highlight */ 0 -1px 0 0
+        rgba(192, 132, 252, 0.22),
+      /* outer purple halo */ 0 0 28px rgba(109, 28, 217, 0.14);
+  }
+
+  /* ── Shared: top + bottom gradient frame overlay (::after) ── */
+  /* We reuse the existing floor / fade elements for bottom;
+     this pseudo adds a top-edge colour wash */
+  .wwd-vis::after,
+  .sol-vis::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      /* top — violet-to-transparent wash */
+      linear-gradient(
+        180deg,
+        rgba(130, 40, 220, 0.18) 0%,
+        rgba(100, 20, 190, 0.07) 28%,
+        transparent 55%
+      ),
+      /* bottom — deep fade matching card body */
+      linear-gradient(0deg, rgba(8, 1, 20, 0.82) 0%, transparent 42%);
+    pointer-events: none;
+    z-index: 2; /* above dot-grid (z-index 0), below SVG (z-index 1 → we raise svg below) */
+  }
+
+  /* ── SVG: raise above frame overlay; static drop-shadow only ── */
+  .wwd-vis svg,
+  .sol-vis svg {
+    position: relative;
+    z-index: 3;
+    padding: 10px;
+    filter: drop-shadow(0 6px 24px rgba(148, 58, 242, 0.32))
+      drop-shadow(0 0 12px rgba(168, 85, 247, 0.2));
+    /* no animation, no transform, no will-change */
+  }
+
+  @media (max-width: 768px) {
+  }
+</style>

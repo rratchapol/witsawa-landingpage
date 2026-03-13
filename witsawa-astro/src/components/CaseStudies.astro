@@ -1,0 +1,120 @@
+---
+---
+<section id="case-studies">
+
+  <div class="reveal" style="text-align:center;margin-bottom:0">
+    <div class="solutions-badge">
+      <span class="dot"></span>
+      Case Studies
+    </div>
+  </div>
+  <div class="reveal reveal-delay-1">
+    <h2 class="section-title" style="-webkit-text-fill-color:unset">
+      <span style="color:#fff;-webkit-text-fill-color:#fff">Real solutions delivering</span><br><span class="grad">measurable impact.</span>
+    </h2>
+  </div>
+  <div class="reveal reveal-delay-2">
+    <div class="cs-desc-wrap">
+      <p class="cs-desc">Our team has helped organizations transform their operations through custom technology solutions, including enterprise platforms, mobile applications, and AI automation systems.</p>
+      <p class="cs-desc">Each project is designed to solve specific business challenges and deliver tangible results.</p>
+    </div>
+  </div>
+
+</section>
+<style is:global>
+  /* ── CASE STUDIES: Consulting cards ── */
+  #case-studies { background: rgba(19,11,46,0.4); text-align: center; }
+  #case-studies { text-align: center; }
+  .cs-desc-wrap { max-width: 720px; margin: 0 auto; line-height: 1.7; text-align: center; }
+  .cs-desc { font-size: 0.95rem; color: var(--text-secondary); line-height: inherit; margin: 24px 0 0; }
+
+  /* 2-column grid */
+  .csc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  /* Card shell */
+  .csc-card {
+    position: relative; overflow: hidden;
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 2rem 2rem 1.75rem;
+    display: flex; flex-direction: column; gap: 0;
+    cursor: default;
+    transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s, background 0.35s;
+  }
+  .csc-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 0% 0%, rgba(168,85,247,0.1) 0%, transparent 58%);
+    opacity: 0; transition: opacity 0.35s; pointer-events: none;
+  }
+  .csc-card:hover {
+    border-color: rgba(168,85,247,0.28);
+    background: rgba(168,85,247,0.025);
+    transform: translateY(-4px);
+    box-shadow: 0 0 60px rgba(124,58,237,0.12), 0 20px 50px rgba(0,0,0,0.3);
+  }
+  .csc-card:hover::before { opacity: 1; }
+
+  /* Industry badge */
+  .csc-industry {
+    display: inline-flex; align-items: center; gap: 0.38rem;
+    font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.22rem 0.7rem; border-radius: 6px; margin-bottom: 1rem; width: fit-content;
+  }
+  .csc-industry--purple { background: rgba(168,85,247,0.13); color: rgba(196,140,254,0.95); border: 1px solid rgba(168,85,247,0.22); }
+  .csc-industry--blue   { background: rgba(96,165,250,0.11);  color: rgba(147,197,253,0.95); border: 1px solid rgba(96,165,250,0.2);  }
+  .csc-industry--indigo { background: rgba(99,102,241,0.12);  color: rgba(165,180,252,0.95); border: 1px solid rgba(99,102,241,0.22); }
+  .csc-industry--teal   { background: rgba(20,184,166,0.1);   color: rgba(94,234,212,0.9);  border: 1px solid rgba(20,184,166,0.18); }
+  .csc-ind-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.75; flex-shrink: 0; }
+
+  /* Project title */
+  .csc-title {
+    font-size: 1.08rem; font-weight: 800; letter-spacing: -0.025em;
+    color: var(--text-primary); line-height: 1.3; margin-bottom: 1.5rem;
+  }
+
+  /* Divider between title and rows */
+  .csc-rule { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin-bottom: 1.4rem; }
+
+  /* Challenge / Solution / Result rows */
+  .csc-rows { display: flex; flex-direction: column; gap: 1.1rem; flex: 1; }
+  .csc-row  { display: flex; flex-direction: column; gap: 0.25rem; }
+
+  .csc-row-label {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .csc-row-label::before {
+    content: ''; display: inline-block; width: 12px; height: 2px; border-radius: 2px;
+    background: currentColor; opacity: 0.7; flex-shrink: 0;
+  }
+  .csc-label--challenge { color: rgba(251,146,60,0.92); }
+  .csc-label--solution  { color: rgba(192,132,252,0.95); }
+  .csc-label--result    { color: rgba(52,211,153,0.92);  }
+
+  .csc-row-text {
+    font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7;
+    padding-left: 1.25rem;
+  }
+
+
+  @media (max-width: 1024px) {
+    .csc-grid { gap: 1rem; }
+    .csc-card { padding: 1.6rem 1.6rem 1.4rem; }
+  }
+  @media (max-width: 768px) {
+    .cases-grid { grid-template-columns: 1fr; }
+    .csc-grid { grid-template-columns: 1fr; }
+    .csc-card { padding: 1.5rem 1.4rem 1.3rem; }
+  }
+  @media (max-width: 580px) {
+    .csc-card { padding: 1.3rem 1.2rem 1.2rem; }
+  }
+
+</style>

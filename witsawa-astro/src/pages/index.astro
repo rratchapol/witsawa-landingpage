@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import WhatWeDo from "../components/WhatWeDo.astro";
+import Solutions from "../components/Solutions.astro";
+import Integration from "../components/Integration.astro";
+import Process from "../components/Process.astro";
+import WhyWitsawa from "../components/WhyWitsawa.astro";
+import CaseStudies from "../components/CaseStudies.astro";
+import TrustedBy from "../components/TrustedBy.astro";
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <div class="noise"></div>
+
+  <div class="page-wrap">
+    <Navbar />
+
+    <Hero />
+
+    <WhatWeDo />
+
+    <Solutions />
+
+    <!-- TECHNOLOGY INTEGRATIONS -->
+    <Integration />
+
+    <div class="divider"></div>
+
+    <!-- PROCESS / HOW WE WORK -->
+    <Process />
+
+    <div class="divider"></div>
+
+    <WhyWitsawa />
+
+    <!-- CASE STUDIES v3 -->
+    <CaseStudies />
+
+    <div class="divider"></div>
+
+    <TrustedBy />
+
+    <CTA />
+
+    <Footer />
+  </div>
+
+  <script
+    data-cfasync="false"
+    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+  ></script>
+</Layout>
