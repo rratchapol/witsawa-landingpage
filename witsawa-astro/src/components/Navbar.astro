@@ -1,5 +1,6 @@
 ---
-
+const pathname = new URL(Astro.request.url).pathname;
+const isStartProject = pathname.includes('/startProject');
 ---
 
 <nav id="navbar">
@@ -35,7 +36,13 @@
       >
     </li>
   </ul>
-  <a href="/startProject" class="nav-cta">Start a Project</a>
+  {
+    !isStartProject && (
+      <a href="/startProject" class="nav-cta">
+        Start a Project
+      </a>
+    )
+  }
   <button
     class="hamburger"
     id="hamburger"
@@ -158,7 +165,7 @@
     .hamburger {
       display: flex;
     }
-    .nav-links.open {
+    .nav-links.active {
       display: flex;
       flex-direction: column;
       position: fixed;
@@ -169,6 +176,12 @@
       padding: 2rem;
       gap: 1.5rem;
       backdrop-filter: blur(20px);
+    }
+  }
+  @media (max-width: 475px) {
+    .nav-cta {
+      margin-left: auto;
+      margin-right: 1.5rem;
     }
   }
 </style>
