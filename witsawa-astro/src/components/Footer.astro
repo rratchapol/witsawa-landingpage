@@ -3,7 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 const isStartProject = pathname.includes("/startProject");
 ---
 
-<footer>
+<footer class={isStartProject ? "is-start-project" : ""}>
   {
     !isStartProject ? (
       <>
@@ -177,6 +177,10 @@ const isStartProject = pathname.includes("/startProject");
     position: relative;
     overflow: hidden;
   }
+  footer.is-start-project {
+    border-top: none;
+    padding-top: 0;
+  }
   footer::before {
     content: "";
     position: absolute;
@@ -342,17 +346,16 @@ const isStartProject = pathname.includes("/startProject");
     padding-top: 1rem;
     position: relative;
     z-index: 1;
-    border-top: 1px solid var(--glass-border);
   }
   .footer-simple .copyright {
-    font-size: 16px;
+    font-size: 0.82rem;
     color: var(--text-muted);
   }
   .footer-simple .back-home {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 14px;
+    font-size: 0.82rem;
     font-weight: 500;
     color: var(--text-secondary);
     text-decoration: none;
