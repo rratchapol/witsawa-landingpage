@@ -1,8 +1,15 @@
 ---
+import { Image, getImage } from "astro:assets";
+import enterpriseImg from "../assets/images/EnterpriseDigitalPlatforms.png";
+import aiAutomationImg from "../assets/images/AIAutomationSystems.png";
+import startupImg from "../assets/images/StartupProductDevelopment.png";
+import customerImg from "../assets/images/CustomerEngagementPlatforms.png";
+import solutionsBg from "../assets/images/bg/solutionsBg.webp";
 
+const optimizedBg = await getImage({ src: solutionsBg });
 ---
 
-<section id="solutions" class="solutions-section">
+<section id="solutions" class="solutions-section" style={`--bg-url: url(${optimizedBg.src})`}>
   <div class="reveal" style="text-align:center;margin-bottom:0">
     <div class="solutions-badge">
       <span class="dot"></span>
@@ -35,7 +42,7 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <image
-            href="/images/EnterpriseDigitalPlatforms.png"
+            href={enterpriseImg.src}
             x="0"
             y="0"
             width="420"
@@ -72,7 +79,7 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <image
-            href="/images/AIAutomationSystems.png"
+            href={aiAutomationImg.src}
             x="0"
             y="0"
             width="420"
@@ -107,7 +114,7 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <image
-            href="/images/StartupProductDevelopment.png"
+            href={startupImg.src}
             x="0"
             y="0"
             width="420"
@@ -142,7 +149,7 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <image
-            href="/images/CustomerEngagementPlatforms.png"
+            href={customerImg.src}
             x="0"
             y="0"
             width="420"
@@ -176,13 +183,13 @@
   #solutions {
     position: relative;
     overflow: hidden;
-    background-image: url("/images/bg/solutionsBg.webp");
+    background-image: var(--bg-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   .solutions-section {
-    background-image: url("/images/bg/solutionsBg.webp");
+    background-image: var(--bg-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

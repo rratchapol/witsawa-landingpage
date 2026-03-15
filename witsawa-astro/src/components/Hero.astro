@@ -1,8 +1,11 @@
 ---
+import { getImage } from "astro:assets";
+import heroBg from "../assets/images/bg/heroBg.webp";
 
+const optimizedHeroBg = await getImage({ src: heroBg });
 ---
 
-<section id="hero">
+<section id="hero" style={`--bg-url: url(${optimizedHeroBg.src})`}>
   <div class="hero-overlay"></div>
   <canvas id="hero-canvas"></canvas>
   <div class="hero-glow-orb"></div>
@@ -81,7 +84,7 @@
     padding: 120px 5vw 80px;
     position: relative;
     overflow: hidden;
-    background-image: url("/images/bg/heroBg.webp");
+    background-image: var(--bg-url);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;

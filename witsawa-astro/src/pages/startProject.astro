@@ -2,6 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import { getImage } from "astro:assets";
+import startProjectBg from "../assets/images/bg/startProjectBg.webp";
+
+const optimizedBg = await getImage({ src: startProjectBg });
 ---
 
 <Layout>
@@ -11,9 +15,9 @@ import Footer from "../components/Footer.astro";
   </Fragment>
 
   <!-- BACKGROUND OVERRIDE (for this specific page) -->
-  <style is:global>
+  <style is:global define:vars={{ bgUrl: `url(${optimizedBg.src})` }}>
     body {
-      background-image: url("/images/bg/startProjectBg.webp");
+      background-image: var(--bgUrl);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

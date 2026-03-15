@@ -1,8 +1,11 @@
 ---
+import { getImage } from "astro:assets";
+import howWeWorkBg from "../assets/images/bg/howWeWorkBg.webp";
 
+const optimizedBg = await getImage({ src: howWeWorkBg });
 ---
 
-<section id="process">
+<section id="process" style={`--bg-url: url(${optimizedBg.src})`}>
   <div class="reveal"><span class="section-tag">How We Work</span></div>
   <div class="reveal reveal-delay-1">
     <h2 class="section-title" style="-webkit-text-fill-color:unset">
@@ -309,7 +312,7 @@
 <style is:global>
   /* PROCESS */
   #process {
-    background-image: url("/images/bg/howWeWorkBg.webp");
+    background-image: var(--bg-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

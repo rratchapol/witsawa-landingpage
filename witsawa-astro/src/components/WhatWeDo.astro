@@ -1,5 +1,8 @@
 ---
-
+import { Image } from "astro:assets";
+import customWebImg from "../assets/images/CustomWebApplications.png";
+import mobileAppImg from "../assets/images/CrossPlatformMobileApplications.png";
+import aiAppImg from "../assets/images/AIPoweredApplications.png";
 ---
 
 <section id="what-we-do">
@@ -25,7 +28,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <image
-              href="/images/CustomWebApplications.png"
+              href={customWebImg.src}
               x="0"
               y="0"
               width="380"
@@ -64,7 +67,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <image
-              href="/images/CrossPlatformMobileApplications.png"
+              href={mobileAppImg.src}
               x="0"
               y="0"
               width="380"
@@ -103,7 +106,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <image
-              href="/images/AIPoweredApplications.png"
+              href={aiAppImg.src}
               x="0"
               y="0"
               width="380"

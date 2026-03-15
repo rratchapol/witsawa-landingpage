@@ -1,8 +1,11 @@
 ---
+import { getImage } from "astro:assets";
+import whyWitsawaBg from "../assets/images/bg/whyWitsawaBg.webp";
 
+const optimizedBg = await getImage({ src: whyWitsawaBg });
 ---
 
-<section id="why">
+<section id="why" style={`--bg-url: url(${optimizedBg.src})`}>
   <div class="why-two-col">
     <!-- Left: Glassmorphism icon card + stats below -->
     <div class="why-icon-col reveal">
@@ -549,7 +552,7 @@
 <style is:global>
   /* WHY WITSAWA */
   #why {
-    background-image: url("/images/bg/whyWitsawaBg.webp");
+    background-image: var(--bg-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

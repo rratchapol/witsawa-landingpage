@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logoWitsawa from "../assets/images/logoWitsawa.png";
+
 const pathname = new URL(Astro.request.url).pathname;
 const isStartProject = pathname.includes("/startProject");
 ---
@@ -10,8 +13,8 @@ const isStartProject = pathname.includes("/startProject");
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="#hero">
-              <img
-                src="/images/logoWitsawa.png"
+              <Image
+                src={logoWitsawa}
                 alt="Witsawa"
                 style="height:42px;width:auto;display:block;margin-bottom:1rem;"
               />

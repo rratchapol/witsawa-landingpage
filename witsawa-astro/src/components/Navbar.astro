@@ -1,12 +1,15 @@
 ---
+import { Image } from "astro:assets";
+import logoWitsawa from "../assets/images/logoWitsawa.png";
+
 const pathname = new URL(Astro.request.url).pathname;
 const isStartProject = pathname.includes('/startProject');
 ---
 
 <nav id="navbar">
   <a href="/" class="nav-logo-img">
-    <img
-      src="/images/logoWitsawa.png"
+    <Image
+      src={logoWitsawa}
       alt="Witsawa"
       style="height:46px;width:auto;display:block;"
     />

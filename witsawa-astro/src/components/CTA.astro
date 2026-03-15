@@ -1,8 +1,11 @@
 ---
+import { getImage } from "astro:assets";
+import ctaBg from "../assets/images/bg/ctaBg.webp";
 
+const optimizedCtaBg = await getImage({ src: ctaBg });
 ---
 
-<section id="cta">
+<section id="cta" style={`--bg-url: url(${optimizedCtaBg.src})`}>
   <!-- Floating particles layer (overlay handled by #cta::before) -->
   <div class="hero-particles" id="ctaParticles"></div>
   <canvas id="cta-canvas"></canvas>
@@ -64,7 +67,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-image: url("/images/bg/ctaBg.webp");
+    background-image: var(--bg-url);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
