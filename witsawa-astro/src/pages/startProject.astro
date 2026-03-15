@@ -13,7 +13,7 @@ import Footer from "../components/Footer.astro";
   <!-- BACKGROUND OVERRIDE (for this specific page) -->
   <style is:global>
     body {
-      background-image: url("/images/start-project-bg.jpg");
+      background-image: url("/images/bg/startProjectBg.webp");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -236,7 +236,10 @@ import Footer from "../components/Footer.astro";
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+      transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
       user-select: none;
     }
     .custom-select-trigger.has-value {
@@ -299,7 +302,9 @@ import Footer from "../components/Footer.astro";
       color: rgba(200, 185, 240, 0.8);
       font-size: 0.9rem;
       cursor: pointer;
-      transition: background 0.2s, color 0.2s;
+      transition:
+        background 0.2s,
+        color 0.2s;
       word-wrap: break-word;
       white-space: normal;
     }
@@ -520,7 +525,7 @@ import Footer from "../components/Footer.astro";
               <label class="form-label" for="category">
                 Category <span class="required">*</span>
               </label>
-              
+
               <select
                 class="form-select hidden-select"
                 id="category"
@@ -540,16 +545,37 @@ import Footer from "../components/Footer.astro";
               <div class="custom-select" id="customSelect">
                 <div class="custom-select-trigger" id="categoryTrigger">
                   <span class="custom-select-value">Select a category…</span>
-                  <svg class="custom-select-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#a855f7" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  <svg
+                    class="custom-select-icon"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#a855f7"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </div>
                 <div class="custom-select-options">
-                  <div class="custom-option" data-value="ai">Artificial Intelligence</div>
-                  <div class="custom-option" data-value="software">Software / SaaS</div>
-                  <div class="custom-option" data-value="mobile">Mobile Application</div>
-                  <div class="custom-option" data-value="iot">Hardware / IoT</div>
-                  <div class="custom-option" data-value="robotics">Robotics</div>
+                  <div class="custom-option" data-value="ai">
+                    Artificial Intelligence
+                  </div>
+                  <div class="custom-option" data-value="software">
+                    Software / SaaS
+                  </div>
+                  <div class="custom-option" data-value="mobile">
+                    Mobile Application
+                  </div>
+                  <div class="custom-option" data-value="iot">
+                    Hardware / IoT
+                  </div>
+                  <div class="custom-option" data-value="robotics">
+                    Robotics
+                  </div>
                   <div class="custom-option" data-value="other">Other</div>
                 </div>
               </div>
@@ -658,9 +684,9 @@ import Footer from "../components/Footer.astro";
         ["fullName", "company", "email", "category"].forEach(function (id) {
           var el = document.getElementById(id);
           if (!el.value.trim()) {
-            if(id === "category") {
+            if (id === "category") {
               var trigger = document.getElementById("categoryTrigger");
-              if(trigger) {
+              if (trigger) {
                 trigger.style.borderColor = "rgba(248,113,113,0.65)";
                 trigger.style.boxShadow = "0 0 0 3px rgba(248,113,113,0.12)";
               }
